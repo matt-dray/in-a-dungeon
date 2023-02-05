@@ -31,7 +31,7 @@ format:
 
 ![](assets/images/r.oguelike-hex.png)
 
-## {r.oguelike}
+## {.center}
 
 ```
 # # # # # # # # # # # # # # # # # # # # 
