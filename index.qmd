@@ -1,0 +1,52 @@
+---
+title: 'Fun and Learning. In a Dungeon!'
+subtitle: 'Matt Dray, March 2023'
+format:
+  revealjs: 
+    theme: [default, assets/styles/dungeon-styles.scss]
+    footer: '[matt-dray.github.io/in-a-dungeon](https://matt-dray.github.io/in-a-dungeon)'
+---
+
+## tl;dr {.center}
+
+1. Take charge
+2. Think in projects
+3. Have fun
+
+## Hello {.center}
+
+1. `r fontawesome::fa('globe')` [matt-dray.com](https://www.matt-dray.com)
+1. `r fontawesome::fa('pencil')` [rostrum.blog](https://www.rostrum.blog)
+1. `r fontawesome::fa('mastodon')` [@mattdray@fosstodon.org](https://www.fosstodon.org/@mattdray)
+
+## DISCLAIMERS {.center}
+
+1. Personal insights
+2. Mindframe
+3. Privilege
+
+# {r.oguelike}
+
+## {.center-h}
+
+![](assets/images/r.oguelike-hex.png)
+
+## {r.oguelike}
+
+```
+# # # # # # # # # # # # # # # # # # # # 
+# # # # # # # . . . . . . . . # # # # # 
+# # # # # # . . . . . . $ . . # # # # # 
+# # # . . . . . . # # . . . . # # # # # 
+# . . . # # # # # # # . . . # # # # # # 
+# . . # # # # # # # # . . . # # # # # # 
+# . . . # # # # # # # . . . . . # . # # 
+# . . # # # # # # # . . . . . . . . # # 
+# . @ . . . # # . # # # # . . . . . # # 
+# . . . . . . . . . E . # # . . . # # # 
+# . . a . . . . . . . . . . . . # # # # 
+# # # # # # # # # # # # # # # # # # # # 
+T: 25 | HP: 10 | $: 0 | a: 0
+Press W, A, S or D then Enter to move, 1 to eat apple, 0 to exit
+Input:
+```

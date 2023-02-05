@@ -1,0 +1,22 @@
+// Fonts
+
+@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap');
+
+/*-- scss:defaults --*/
+
+// https://quarto.org/docs/presentations/revealjs/themes.html#sass-variables
+
+$headingFont: 'Cutive Mono', monospace;
+$mainFont: 'Cutive Mono', monospace;
+$codeFont: 'Cutive Mono', monospace;
+
+$theme-black: #3D3C42;
+$theme-green: #00FF00;
+
+$body-bg: $theme-black;
+$link-color: lighten($theme-black, 50%);
+$body-color: $theme-green;
+
+.center-h {
+  text-align: center;
+}
