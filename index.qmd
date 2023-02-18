@@ -13,25 +13,57 @@ format:
 2. Think in projects
 3. Have fun
 
-## Hello {.center}
+# Hello
 
-1. `r fontawesome::fa('globe')` [matt-dray.com](https://www.matt-dray.com)
-1. `r fontawesome::fa('pencil')` [rostrum.blog](https://www.rostrum.blog)
-1. `r fontawesome::fa('mastodon')` [@mattdray@fosstodon.org](https://www.fosstodon.org/@mattdray)
+## {.center}
+
+`r fontawesome::fa('globe')` [matt-dray.com](https://www.matt-dray.com)
+
+`r fontawesome::fa('pencil')` [rostrum.blog](https://www.rostrum.blog)
+
+`r fontawesome::fa('mastodon')` [@mattdray@fosstodon.org](https://www.fosstodon.org/@mattdray)
 
 ## DISCLAIMERS {.center}
 
-1. Personal insights
-2. Mindframe
-3. Privilege
+* Personal insights
+* Mindframe
+* Privilege
 
-# {r.oguelike}
+# The problem
+
+## Bad learning {.center}
+
+* Check box
+* Memory
+* Dull
+
+## Better? {.center}
+
+* Solve a problem
+* Shake it up
+* Contain it
+
+# An example
 
 ## {.center-h}
 
-![](assets/images/r.oguelike-hex.png)
+<img src="assets/images/r.oguelike-hex.png" width="100%" alt="A black hexagon with a green border. Text below center on the hexagon reads 'r.oguelike' in green. Above that is a 3 by 10 grid of punctuation characters in green. Far left and right edges are hashmarks and between them are periods, as well as a single 'at' symbol and dollar symbol. The pattern mimics a text-only roguelike videogame typical of the 1980s.">
 
 ## {.center}
+
+A tile-based roguelike toy in R
+
+`r fontawesome::fa('github')` [github.com/matt-dray/r.oguelike](https://github.com/matt-dray/r.oguelike)
+
+`r fontawesome::fa('globe')` [rostrum.blog/tags/r.oguelike/](https://www.rostrum.blog/tags/r.oguelike/)
+
+## Stuff to learn {.center}
+
+1. Procedural generation
+1. Pathfinding
+1. Packaging
+
+## The 'game' {.center}
 
 ```
 # # # # # # # # # # # # # # # # # # # # 
@@ -50,3 +82,142 @@ T: 25 | HP: 10 | $: 0 | a: 0
 Press W, A, S or D then Enter to move, 1 to eat apple, 0 to exit
 Input:
 ```
+
+## Procgen {.center}
+
+::: {.panel-tabset}
+
+### Step 1
+
+```
+# # # # # # # # # # # # # # # # # # # # 
+# # # # # # # # # # # # # # # # # # # # 
+# # # # # # # # # # # . # # # # # # # # 
+# # # # # # # # # # # # # # # # # # # # 
+# # # # # # # # # . # # # # # # # # # # 
+# # # # # # # # # # # # # # # # # # # # 
+# # # . # # # # # # # # # # # # # # # # 
+# # # # # # # # # # # # # # # # # # # # 
+# # # # # # # # # # # # # # # # # # # # 
+# # # # # # # # # # # # # # # # # # # # 
+# # # # # # # # # # # # # # . # # # # # 
+# # # # # # # # # # # # # # # # # # # # 
+```
+
+### 2
+
+```
+# # # # # # # # # # # # # # # # # # # # 
+# # # # # # # # # # # # # # # # # # # # 
+# # # . . . . . . . . . # # # # # # # # 
+# # # . # # # # # # # . # # # # # # # # 
+# # # . # # # # # . . . # # # # # # # # 
+# # # . # # # # # # # # # # # # # # # # 
+# # # . . . . . . . . . . . . # # # # # 
+# # # # # # # # # # # # # # . # # # # # 
+# # # # # # # # # # # # # # . # # # # # 
+# # # # # # # # # # # # # # . # # # # # 
+# # # # # # # # # # # # # # . # # # # # 
+# # # # # # # # # # # # # # # # # # # # 
+```
+
+### 3
+
+```
+# # # # # # # # # # # # # # # # # # # # 
+# # # # # # . # # . # # # # # # # # # # 
+# # # . . . . . . . . . # # # # # # # # 
+# # # . # # . # # # # . . # # # # # # # 
+# # # . # # # # # . . . # # # # # # # # 
+# # . . # . # # # # . # # # # # # # # # 
+# # . . . . . . . . . . . . . # # # # # 
+# # # # . . # # # # # # # # . # # # # # 
+# # # # # # # # # # # # # . . # # # # # 
+# # # # # # # # # # # # # . . # # # # # 
+# # # # # # # # # # # # # # . # # # # # 
+# # # # # # # # # # # # # # # # # # # # 
+```
+
+### 4
+
+```
+# # # # # # # # # # # # # # # # # # # # 
+# # # # # # . # . . # # # # # # # # # # 
+# # . . . . . . . . . . # # # # # # # # 
+# # . . # # . # . # # . . # # # # # # # 
+# # # . # # # # # . . . # # # # # # # # 
+# # . . # . # # # # . # # # # # # # # # 
+# # . . . . . . . . . . . . . . # # # # 
+# # # . . . # # . # . # # # . # # # # # 
+# # # # . # # # # # # # # . . . # # # # 
+# # # # # # # # # # # # # . . # # # # # 
+# # # # # # # # # # # # # # . # # # # # 
+# # # # # # # # # # # # # # # # # # # # 
+```
+
+### 5
+
+```
+# # # # # # # # # # # # # # # # # # # # 
+# # . # # # . # . . # # # # # # # # # # 
+# . . . . . . . . . . . . # # # # # # # 
+# # . . # # . # . # # . . # # # # # # # 
+# # # . # # # # # . . . # # # # # # # # 
+# # . . # . . # # # . # # # . . # # # # 
+# # . . . . . . . . . . . . . . # # # # 
+# # . . . . # . . # . # # # . # # # # # 
+# # # # . # # # . # # # # . . . . # # # 
+# # # # # # # # # # # # # . . . # # # # 
+# # # # # # # # # # # # # # . # # # # # 
+# # # # # # # # # # # # # # # # # # # # 
+```
+
+:::
+
+## Pathfind {.center}
+
+::: {.panel-tabset}
+
+### Step 1
+
+```
+# # # # # # # 
+# . . . . . # 
+# . E . . . # 
+# . . . . . # 
+# # # # # . # 
+# . . . . . # 
+# . @ . . . # 
+# . . . . . # 
+# # # # # # # 
+```
+
+### 2
+
+```
+# # # # # # # 
+# C B A 9 8 # 
+# B A 9 8 7 # 
+# A 9 8 7 6 # 
+# # # # # 5 # 
+# 2 1 2 3 4 # 
+# 1 0 1 2 3 # 
+# 2 1 2 3 4 # 
+# # # # # # # 
+```
+
+### 3
+
+```
+# # # # # # # 
+# . . . . . # 
+# . . E . . # 
+# . . . . . # 
+# # # # # . # 
+# . . . . . # 
+# . @ . . . # 
+# . . . . . # 
+# # # # # # # 
+```
+
+:::
