@@ -13,6 +13,12 @@ format:
 2. Think in projects
 3. Have fun
 
+::: {.notes}
+* You are responsible for your own learning
+* A thing that's self-contained, that has a purpose
+* Life is too short
+:::
+
 # Hello
 
 ## {.center}
@@ -23,31 +29,82 @@ format:
 
 `r fontawesome::fa('mastodon')` [@mattdray@fosstodon.org](https://www.fosstodon.org/@mattdray)
 
+::: {.notes}
+* I've worked seven Civil Service roles in five organisations as a data scientist and statistician
+* 95% of my work has remained internal and therefore useless
+* I have never been on a course that I found useful
+* I'm not a teacher, I have no teaching formal skills, your mileage may vary
+:::
+
 ## DISCLAIMERS {.center}
 
 * Personal insights
 * Mindframe
 * Privilege
 
+::: {.notes}
+* I'm not here to speak on behalf of my organisation (I haven't even told you who they are) or the Civil Service in general
+* I want to learn, I enjoy learning
+* I have the time and space to try stuff in my own personal time and have had good managers who appreciate my learning needs
+:::
+
 # The problem
+
+::: {.notes}
+* We're here to talk about learning
+* If you've learnt everything already, then well done
+* I am not satisifed, are you?
+:::
 
 ## Bad learning {.center}
 
 * Check box
-* Memory
 * Dull
+* Memory
+
+::: {.notes}
+* Too much learning is a standalone course that isn't tailored to your needs
+* You're doing it because it ticks a box, the org has money to spend
+* Quite often they're not interesting, I'm not engaged
+* Even if interesting, I can't remember any of it the following week/month/year
+* 'Badge-chasing'
+:::
 
 ## Better? {.center}
 
 * Solve a problem
-* Shake it up
 * Contain it
+* Talk about it
+
+::: {.notes}
+* What if you could focus on a problem to solve and work towards it?
+* Limit its scope early, solve one problem, expand later
+* You owe yourself to cmmunicate it, you owe others nothing, but it would be nice wouldn't it?
+* You are unrestricted, what do _you_ want to do? How do you want to _present_ it? 
+:::
+
+## Worry, doubt {.center}
+
+* 'It isn't useful'
+* 'I won't be allowed'
+* 'I'm not very good'
+
+::: {.notes}
+* I've been around long enough to know what works for me as a 'junior' staff member
+* I am giving you permission to try something new
+* How do you know if you don't try?
+:::
 
 # An example
 
 ## {.center-h}
 
 <img src="assets/images/r.oguelike-hex.png" width="100%" alt="A black hexagon with a green border. Text below center on the hexagon reads 'r.oguelike' in green. Above that is a 3 by 10 grid of punctuation characters in green. Far left and right edges are hashmarks and between them are periods, as well as a single 'at' symbol and dollar symbol. The pattern mimics a text-only roguelike videogame typical of the 1980s.">
+
+::: {.notes}
+* {r.oguelike} is an R package I made in my own time that taught me a bunch of stuff
+* Including two themes of this conference: patterns and connections
+:::
 
 ## {.center}
 
@@ -56,6 +113,11 @@ A tile-based roguelike toy in R
 `r fontawesome::fa('github')` [github.com/matt-dray/r.oguelike](https://github.com/matt-dray/r.oguelike)
 
 `r fontawesome::fa('globe')` [rostrum.blog/tags/r.oguelike/](https://www.rostrum.blog/tags/r.oguelike/)
+
+::: {.notes}
+* You can access the R package on GitHub
+* I've written a series of blog posts about the development of this package
+:::
 
 ## Stuff to learn {.center}
 
@@ -82,6 +144,13 @@ T: 25 | HP: 10 | $: 0 | a: 0
 Press W, A, S or D then Enter to move, 1 to eat apple, 0 to exit
 Input:
 ```
+
+::: {.notes}
+* Rogue was a simple game released in 1980 where the graphics are characters
+* An important feature was procedural generation: the dungeon was different every time you played
+* You had to collect items and battle enemies to recover an artifact
+* {r.oguelike} emulates this by creating a procedurally generated dungeon where you can collect items and battle an enemy
+:::
 
 ## Procgen {.center}
 
@@ -174,6 +243,14 @@ Input:
 
 :::
 
+::: {.notes}
+* The process for dungeon building is simple
+* Lay some randomised points
+* Join them
+* Expand randomly over n iterations
+* It's actually more complicated than this
+:::
+
 ## Pathfind {.center}
 
 ::: {.panel-tabset}
@@ -221,3 +298,25 @@ Input:
 ```
 
 :::
+
+::: {.notes}
+* How can the enemy navigate to the player?
+* Generate a layer that gives you the number of tiles away from the player
+* Move the enemy to a tile with a lower value
+:::
+
+## In-gov {.center}
+
+* [Data Science and Visualisation Accelerators](https://www.gov.uk/government/publications/data-science-accelerator-programme/introduction-to-the-data-science-accelerator-programme)
+* [Volunteering](https://analysisfunction.civilservice.gov.uk/careers/volunteering/)
+
+## For fun {.center}
+
+* [Tidytuesday](https://github.com/rfordatascience/tidytuesday)
+* [Advent of Code](https://adventofcode.com/), [30DayMapChallenge](https://30daymapchallenge.com/), [genuary](https://genuary.art/)
+
+## tl;dr {.center}
+
+1. Take charge
+2. Think in projects
+3. Have fun
