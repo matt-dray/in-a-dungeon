@@ -4,159 +4,120 @@ subtitle: 'Matt Dray, March 2023'
 format:
   revealjs: 
     theme: [default, assets/styles/dungeon-styles.scss]
-    footer: '[matt-dray.github.io/in-a-dungeon](https://matt-dray.github.io/in-a-dungeon)'
+    code-overflow: wrap
+    # footer: '[matt-dray.github.io/in-a-dungeon](https://matt-dray.github.io/in-a-dungeon)'
 ---
 
-## tl;dr {.center}
+##  tl;dr {.center}
 
-1. Take charge
-2. Think in projects
-3. Have fun
+Try project-driven learning. Have fun.
 
-::: {.notes}
-* You are responsible for your own learning
-* A thing that's self-contained, that has a purpose
-* Life is too short
-:::
+`r fontawesome::fa('github')` [github.com/matt-dray/r.oguelike](https://github.com/matt-dray/r.oguelike)
 
-# Hello
-
-## {.center}
+`r fontawesome::fa('book')` [rostrum.blog/tags/r.oguelike/](https://www.rostrum.blog/tags/r.oguelike/)
 
 `r fontawesome::fa('globe')` [matt-dray.com](https://www.matt-dray.com)
 
-`r fontawesome::fa('pencil')` [rostrum.blog](https://www.rostrum.blog)
-
-`r fontawesome::fa('mastodon')` [@mattdray@fosstodon.org](https://www.fosstodon.org/@mattdray)
+# \[0\] Hello
 
 ::: {.notes}
-* I've worked seven Civil Service roles in five organisations as a data scientist and statistician
-* 95% of my work has remained internal and therefore useless
-* I have never been on a course that I found useful
-* I'm not a teacher, I have no teaching formal skills, your mileage may vary
+* I've had multiple roles in five orgs.
+* Currently involved in statistics quality, production, presentation and (Reproducible Analytical Pipelines) RAP.
+* I had little experience when I started.
 :::
 
-## DISCLAIMERS {.center}
+## Disclaimers {.center}
 
-* Personal insights
-* Mindframe
-* Privilege
+* These are my thoughts
+* We're all different
+* I'm privileged
 
 ::: {.notes}
-* I'm not here to speak on behalf of my organisation (I haven't even told you who they are) or the Civil Service in general
-* I want to learn, I enjoy learning
-* I have the time and space to try stuff in my own personal time and have had good managers who appreciate my learning needs
+* These are my personal experiences and I'm not speaking officially. 
+* My managers give me time and space and I can afford to use my free time too.
+* What works for me might not work for you.
 :::
 
-# The problem
+# \[1\] The problem
+
+## Definitions {.center}
+
+1. Module-driven
+2. Project-driven
 
 ::: {.notes}
-* We're here to talk about learning
-* If you've learnt everything already, then well done
-* I am not satisifed, are you?
+* 'Normal'
+* 'Rare'
 :::
 
-## Bad learning {.center}
+## \[1\] Module-driven {.center}
 
-* Check box
-* Dull
-* Memory
+* Checkbox exercise
+* Passive
+* Forgettable
 
 ::: {.notes}
-* Too much learning is a standalone course that isn't tailored to your needs
-* You're doing it because it ticks a box, the org has money to spend
-* Quite often they're not interesting, I'm not engaged
-* Even if interesting, I can't remember any of it the following week/month/year
-* 'Badge-chasing'
+* It ticks a box in your learning plan.
+* It isn't tailored to your needs.
+* Lacks engagement.
 :::
 
-## Better? {.center}
+## \[2\] Project-driven {.center}
 
 * Solve a problem
-* Contain it
+* Fail
 * Talk about it
 
 ::: {.notes}
 * What if you could focus on a problem to solve and work towards it?
-* Limit its scope early, solve one problem, expand later
-* You owe yourself to cmmunicate it, you owe others nothing, but it would be nice wouldn't it?
-* You are unrestricted, what do _you_ want to do? How do you want to _present_ it? 
+* Limit its scope early, solve one problem, expand later.
+* Broadcasting can help keep you in check, bring other people on your journey, and help you in unexpected ways. 
 :::
 
-## Worry, doubt {.center}
-
-* 'It isn't useful'
-* 'I won't be allowed'
-* 'I'm not very good'
+# \[2\] Example
 
 ::: {.notes}
-* I've been around long enough to know what works for me as a 'junior' staff member
-* I am giving you permission to try something new
-* How do you know if you don't try?
+* This is a project-driven example of mine.
+* It's slightly contrived.
+* It involves connectivity and patterns, which are themes of this conference.
+* But it also panders to the nerds.
 :::
 
-# An example
+## Goals {.center}
+
+1. Procgen, pathfinding
+1. User interaction
+1. Packaging
 
 ## {.center-h}
 
-<img src="assets/images/r.oguelike-hex.png" width="100%" alt="A black hexagon with a green border. Text below center on the hexagon reads 'r.oguelike' in green. Above that is a 3 by 10 grid of punctuation characters in green. Far left and right edges are hashmarks and between them are periods, as well as a single 'at' symbol and dollar symbol. The pattern mimics a text-only roguelike videogame typical of the 1980s.">
-
-::: {.notes}
-* {r.oguelike} is an R package I made in my own time that taught me a bunch of stuff
-* Including two themes of this conference: patterns and connections
-:::
-
-## {.center}
-
-A tile-based roguelike toy in R
+<img src="assets/images/r.oguelike-hex.png" width="20px" alt="A black hexagon with a green border. Text below center on the hexagon reads 'r.oguelike' in green. Above that is a 3 by 10 grid of punctuation characters in green. Far left and right edges are hashmarks and between them are periods, as well as a single 'at' symbol and dollar symbol. The pattern mimics a text-only roguelike videogame typical of the 1980s.">
 
 `r fontawesome::fa('github')` [github.com/matt-dray/r.oguelike](https://github.com/matt-dray/r.oguelike)
 
-`r fontawesome::fa('globe')` [rostrum.blog/tags/r.oguelike/](https://www.rostrum.blog/tags/r.oguelike/)
+`r fontawesome::fa('book')` [rostrum.blog/tags/r.oguelike/](https://www.rostrum.blog/tags/r.oguelike/)
 
 ::: {.notes}
-* You can access the R package on GitHub
-* I've written a series of blog posts about the development of this package
+* You can access the R package on GitHub.
+* I've written a series of blog posts about the development of this package.
 :::
 
-## Stuff to learn {.center}
+## {.center-h}
 
-1. Procedural generation
-1. Pathfinding
-1. Packaging
-
-## The 'game' {.center}
-
-```
-# # # # # # # # # # # # # # # # # # # # 
-# # # # # # # . . . . . . . . # # # # # 
-# # # # # # . . . . . . $ . . # # # # # 
-# # # . . . . . . # # . . . . # # # # # 
-# . . . # # # # # # # . . . # # # # # # 
-# . . # # # # # # # # . . . # # # # # # 
-# . . . # # # # # # # . . . . . # . # # 
-# . . # # # # # # # . . . . . . . . # # 
-# . @ . . . # # . # # # # . . . . . # # 
-# . . . . . . . . . E . # # . . . # # # 
-# . . a . . . . . . . . . . . . # # # # 
-# # # # # # # # # # # # # # # # # # # # 
-T: 25 | HP: 10 | $: 0 | a: 0
-Press W, A, S or D then Enter to move, 1 to eat apple, 0 to exit
-Input:
-```
+<img src="assets/images/start-game.png" alt="Output in the R terminal. The top section is a tile grid of characters laid out like an 80s videogame with text-only graphics, like Rogue. Red hashes are wall tiles Black periods are floor tiles. A green dollar sign, a yellow 'a', a pink letter 'E' and a blue 'at' symbol. UNderneath is a status bar with some inventory information and instructions on how to play. The cursor is waiting on a line that says 'input'.">
 
 ::: {.notes}
-* Rogue was a simple game released in 1980 where the graphics are characters
-* An important feature was procedural generation: the dungeon was different every time you played
-* You had to collect items and battle enemies to recover an artifact
-* {r.oguelike} emulates this by creating a procedurally generated dungeon where you can collect items and battle an enemy
+* Rogue was a simple game released in 1980 where the graphics are characters.
+* An important feature was procedural generation: the dungeon was different every time you played.
+* You had to collect items and battle enemies to recover an artifact.
+* {r.oguelike} emulates this by creating a procedurally generated dungeon where you can collect items and battle an enemy.
 :::
 
 ## Procgen {.center}
 
 ::: {.panel-tabset}
 
-### Step 1
+## Step 1
 
 ```
 # # # # # # # # # # # # # # # # # # # # 
@@ -173,7 +134,7 @@ Input:
 # # # # # # # # # # # # # # # # # # # # 
 ```
 
-### 2
+## 2
 
 ```
 # # # # # # # # # # # # # # # # # # # # 
@@ -190,7 +151,7 @@ Input:
 # # # # # # # # # # # # # # # # # # # # 
 ```
 
-### 3
+## 3
 
 ```
 # # # # # # # # # # # # # # # # # # # # 
@@ -207,7 +168,7 @@ Input:
 # # # # # # # # # # # # # # # # # # # # 
 ```
 
-### 4
+## 4
 
 ```
 # # # # # # # # # # # # # # # # # # # # 
@@ -224,7 +185,7 @@ Input:
 # # # # # # # # # # # # # # # # # # # # 
 ```
 
-### 5
+## 5
 
 ```
 # # # # # # # # # # # # # # # # # # # # 
@@ -240,7 +201,6 @@ Input:
 # # # # # # # # # # # # # # . # # # # # 
 # # # # # # # # # # # # # # # # # # # # 
 ```
-
 :::
 
 ::: {.notes}
@@ -301,22 +261,53 @@ Input:
 
 ::: {.notes}
 * How can the enemy navigate to the player?
-* Generate a layer that gives you the number of tiles away from the player
-* Move the enemy to a tile with a lower value
+* Generate a layer that gives you the number of tiles away from the player.
+* Move the enemy to a tile with a lower value.
+:::
+
+## Bonuses {.center}
+
+1. Snapshot test
+1. Binder
+1. Dev logs
+
+# \[3\] Actions
+
+::: {.notes}
+* Here's what I want you to consider.
 :::
 
 ## In-gov {.center}
 
-* [Data Science and Visualisation Accelerators](https://www.gov.uk/government/publications/data-science-accelerator-programme/introduction-to-the-data-science-accelerator-programme)
+* [Accelerators](https://www.gov.uk/government/publications/data-science-accelerator-programme/introduction-to-the-data-science-accelerator-programme)
 * [Volunteering](https://analysisfunction.civilservice.gov.uk/careers/volunteering/)
+* [Coffee & Coding](https://analysisfunction.civilservice.gov.uk/support/reproducible-analytical-pipelines/coffee-and-coding/#cabinet-office)
 
-## For fun {.center}
+::: {.notes}
+* There are some structured offers that implement contained, project-driven learning.
+* Data Science and visualisation accelerators are cross-government.
+* You are entitled to volunteering, where you could take on a project-driven approach.
+* Coffee & Coding (or similar) let you share your progress, hold yourself to account and to network with the wider analytical community. This can improve your chances of those 'bonus' features for your project.
+:::
 
-* [Tidytuesday](https://github.com/rfordatascience/tidytuesday)
-* [Advent of Code](https://adventofcode.com/), [30DayMapChallenge](https://30daymapchallenge.com/), [genuary](https://genuary.art/)
+## External {.center}
 
-## tl;dr {.center}
+* [tidytuesday](https://github.com/rfordatascience/tidytuesday)
+* [30DayChartChallenge](https://30daychartchallenge.org/), [30DayMapChallenge](https://30daymapchallenge.com/), [genuary](https://genuary.art/)
+* [Advent of Code](https://adventofcode.com/)
 
-1. Take charge
-2. Think in projects
-3. Have fun
+::: {.notes}
+* There are several prompt-driven schemes that also work in the context of project-driven learning.
+* Tidytuesday is a community-driven event that provides a dataset on a weekly basis that you can go away and explore to produce some kind of output (a table, a chart, an app, etc).
+* There's a bunch of month-long events throughout the year that do a similar thing, but give you a daily challenge within the monthly theme (e.g. charts, maps, generative).
+:::
+
+##  tl;dr {.center}
+
+Try project-driven learning. Have fun.
+
+`r fontawesome::fa('github')` [github.com/matt-dray/r.oguelike](https://github.com/matt-dray/r.oguelike)
+
+`r fontawesome::fa('book')` [rostrum.blog/tags/r.oguelike/](https://www.rostrum.blog/tags/r.oguelike/)
+
+`r fontawesome::fa('globe')` [matt-dray.com](https://www.matt-dray.com)

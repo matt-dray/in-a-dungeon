@@ -13,12 +13,16 @@ $codeFont: 'Cutive Mono', monospace;
 $theme-black: #3D3C42;
 $theme-green: #00FF00;
 
-$code-block-font-size: 22px;
+$code-block-font-size: 27px;
 
 $body-bg: $theme-black;
 $body-color: $theme-green;
-$link-color: lighten($theme-black, 50%);
+$link-color: lighten($theme-black, 70%);
 
 .center-h {
   text-align: center;
+}
+
+.panel-tabset {
+  font-size: 20px;
 }
