@@ -38,7 +38,7 @@ Try project-driven learning. Have fun.
 * What works for me might not work for you.
 :::
 
-# \[1\] The problem
+# \[1\] The idea
 
 ## Definitions {.center}
 
@@ -65,7 +65,7 @@ Try project-driven learning. Have fun.
 ## \[2\] Project-driven {.center}
 
 * Solve a problem
-* Fail
+* Fail meaningfully
 * Talk about it
 
 ::: {.notes}
@@ -85,9 +85,9 @@ Try project-driven learning. Have fun.
 
 ## Goals {.center}
 
-1. Procgen, pathfinding
-1. User interaction
-1. Packaging
+1. Implement simple algorithms
+1. Understand user interaction
+1. Build an R package
 
 ## {.center-h}
 
@@ -104,7 +104,7 @@ Try project-driven learning. Have fun.
 
 ## {.center-h}
 
-<img src="assets/images/start-game.png" alt="Output in the R terminal. The top section is a tile grid of characters laid out like an 80s videogame with text-only graphics, like Rogue. Red hashes are wall tiles Black periods are floor tiles. A green dollar sign, a yellow 'a', a pink letter 'E' and a blue 'at' symbol. UNderneath is a status bar with some inventory information and instructions on how to play. The cursor is waiting on a line that says 'input'.">
+<img src="assets/images/r.oguelike-chase.gif" alt="Output in the R terminal. The top section is a tile grid of characters laid out like an 80s videogame with text-only graphics, like Rogue. Red hashes are wall tiles Black periods are floor tiles. A green dollar sign, a yellow 'a', a pink letter 'E' and a blue 'at' symbol. UNderneath is a status bar with some inventory information and instructions on how to play. The cursor is waiting on a line that says 'input'.">
 
 ::: {.notes}
 * Rogue was a simple game released in 1980 where the graphics are characters.
@@ -267,9 +267,14 @@ Try project-driven learning. Have fun.
 
 ## Bonuses {.center}
 
-1. Snapshot test
-1. Binder
-1. Dev logs
+1. Learnt snapshot testing
+1. Used Binder
+1. Implemented sounds
+
+## {.center-h}
+
+<img src="assets/images/isocubes-chase.gif" alt="Output in the R terminal. The top section is a tile grid of characters laid out like an 80s videogame with text-only graphics, like Rogue. Red hashes are wall tiles Black periods are floor tiles. A green dollar sign, a yellow 'a', a pink letter 'E' and a blue 'at' symbol. UNderneath is a status bar with some inventory information and instructions on how to play. The cursor is waiting on a line that says 'input'.">
+
 
 # \[3\] Actions
 
