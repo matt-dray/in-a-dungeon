@@ -124,15 +124,15 @@ B. Project-driven
 
 ## \[B\] Project-driven {.center}
 
-* Have fun
 * Fail meaningfully
 * Talk about it
+* Have fun
 
 ::: {.notes}
 
-* * The data you use and the functionality of the thing you create don't have to be meaningful. It might be something that helps your organisation. But it can be a bit silly, like in the example I'll show in a minute.
 * Making a mistake will engage you to solve it.
 * Broadcasting can help keep you in check, bring other people on your journey, and help you in unexpected ways. I don't think this is emphasised in modular learning.
+* The data you use and the functionality of the thing you create don't have to be meaningful. It might be something that helps your organisation. But it can be a bit silly, like in the example I'll show in a minute.
 
 :::
 
@@ -167,17 +167,27 @@ B. Project-driven
 
 * An R package
 * Openly available on GitHub
-* Communicate via dev logs, open code
+* Narrative devlogs
+
+::: {.notes}
+
+* So I know what I want to achieve, what project format makes most sense?
+* Packages are a fundamental discrete structure for R code.
+* This has the advantage of being open for others to use and contribute to.
+* I also decided that I would write short blogposts, or 'developer logs', to explain my thinking out loud.
+
+:::
 
 ## {.center-h}
 
-<img src="assets/images/r.oguelike-chase.gif" alt="Output in the R terminal. The top section is a tile grid of characters laid out like an 80s videogame with text-only graphics, like Rogue. Red hashes are wall tiles Black periods are floor tiles. A green dollar sign, a yellow 'a', a pink letter 'E' and a blue 'at' symbol. UNderneath is a status bar with some inventory information and instructions on how to play. The cursor is waiting on a line that says 'input'.">
+<img src="assets/images/r.oguelike-chase.gif" alt="Output in the R terminal. The top section is a tile grid of characters laid out like an 80s videogame with text-only graphics, like Rogue. Red hashes are wall tiles Black periods are floor tiles. A green dollar sign, a yellow 'a', a pink letter 'E' and a blue 'at' symbol. Underneath is a status bar with some inventory information and instructions on how to play. The cursor is waiting on a line that says 'input'.">
 
 ::: {.notes}
-* Rogue was a simple game released in 1980 where the graphics are characters.
-* An important feature was procedural generation: the dungeon was different every time you played.
-* You had to collect items and battle enemies to recover an artifact.
-* {r.oguelike} emulates this by creating a procedurally generated dungeon where you can collect items and battle an enemy.
+
+* So what did I end up doing? Well, I made an interactive, turn-base, tile-based game for the R console. Which is... unnatural.
+* I created functions to procedurally-generate dungeons, where the player collects useable items into an inventory and battles an enemy, which chases you around.
+* This takes inspiration from Rogue, released in 1980, and later 'roguelikes' that it influenced.
+
 :::
 
 ## Goals {.center}
@@ -185,6 +195,14 @@ B. Project-driven
 1. Interact with user `r fontawesome::fa('check')`
 2. Detect and respond to IDE `r fontawesome::fa('check')`
 3. Build simple algorithms from scratch
+
+::: {.notes}
+
+* I used `readline()` to prompt the user and read the response.
+* I detected whether the user was in RStudio, where they would have to use WASD keys to move, or Terminal, where I could use the {keypress} package for detecting keypresses directly (i.e. arrow keys).
+* I also implemented procedural 'cave' generation and simple breadth-first pathfinding. I'll talk about hose in a little more detail.
+
+:::
 
 ## Procgen {.center}
 
@@ -277,11 +295,10 @@ B. Project-driven
 :::
 
 ::: {.notes}
-* The process for dungeon building is simple
-* Lay some randomised points
-* Join them
-* Expand randomly over n iterations
-* It's actually more complicated than this
+
+* The basic process for dungeon building is to lay some randomised points; join them; expand randomly to the north, south, east or west over _n_ iterations.
+* The user can select a number of parameters like the size of the dungeon; the number of iterations, whether to join the points randomly or frin order ('snakiness').
+
 :::
 
 ## Pathfind {.center}
@@ -335,8 +352,10 @@ B. Project-driven
 ::: {.notes}
 
 * How can the enemy navigate to the player?
-* Generate a layer that gives you the number of tiles away from the player.
-* Move the enemy to a tile with a lower value.
+* Generate a layer or 'mesh' that gives you the number of tiles away from the player.
+* Move the enemy to a tile with a lower value in this 'nav mesh'.
+* Recalculate every time the player moves.
+* This means the enemy will move around obstacles to meet the player.
 
 :::
 
@@ -346,52 +365,154 @@ B. Project-driven
 2. Detect and respond to IDE `r fontawesome::fa('check')`
 3. Build simple algorithms from scratch `r fontawesome::fa('check')`
 
+::: {.notes}
+
+* So that's all the goals ticked off.
+
+:::
+
 ## {.center-h}
 
-<img src="assets/images/r.oguelike-hex.png" width="20px" alt="A black hexagon with a green border. Text below center on the hexagon reads 'r.oguelike' in green. Above that is a 3 by 10 grid of punctuation characters in green. Far left and right edges are hashmarks and between them are periods, as well as a single 'at' symbol and dollar symbol. The pattern mimics a text-only roguelike videogame typical of the 1980s.">
+<img src="assets/images/r.oguelike-hex.png" alt="A black hexagon with a green border. Text below center on the hexagon reads 'r.oguelike' in green. Above that is a 3 by 10 grid of punctuation characters in green. Far left and right edges are hashmarks and between them are periods, as well as a single 'at' symbol and dollar symbol. The pattern mimics a text-only roguelike videogame typical of the 1980s.">
 
 `r fontawesome::fa('github')` [github.com/matt-dray/r.oguelike](https://github.com/matt-dray/r.oguelike)
 
 `r fontawesome::fa('book')` [rostrum.blog/tags/r.oguelike/](https://www.rostrum.blog/tags/r.oguelike/)
 
+::: {.notes}
+
+* The whole thing is bundled up in the r.oguelike package, which is available from GitHub.
+* You can also read the devlog series.
+
+:::
+
 ## Format {.center}
 
 * An R package `r fontawesome::fa('check')`
 * Openly available on GitHub `r fontawesome::fa('check')`
-* Communicate via dev logs, open code `r fontawesome::fa('check')`
+* Narrative devlogs `r fontawesome::fa('check')`
+
+::: {.notes}
+
+* So that means that I met the discrete project structure of the approach.
+* I have a minimum viable product that taught me what I needed; that exists openly for me and others to refer to; and that has some supporting narration that explains my thinking.
+
+:::
 
 ## Bonus round {.center}
 
-1. Snapshot testing
-2. Play in-browser with Binder
-3. Three dimensions?
+1. Package maintenance
+2. [Play in-browser](https://mybinder.org/v2/gh/matt-dray/play-r.oguelike/main?urlpath=rstudio) with [Binder](https://mybinder.org/)
+3. A _third_ dimension?!
+
+::: {.notes}
+
+* But there were also some extra things I learnt as a bonus of the project-based approach.
+* These are things I hadn't set out to learn.
+* I got suggestions as a result of the project being open.
+* I was able to build on the output of my original goals to expand the project.
+
+:::
 
 ## {.center-h}
 
 <img src="assets/images/snapshot-pr.png" alt="A screenshot of a pull request in the r.oguelike GitHub repository. User trevorld added snapshot tests to the repo and matt-dray merged it.">
 
+::: {.notes}
+
+* Working in the open on GitHub and in writing devlogs meant that others could contribute.
+* This user noted that I wanted to test my function for generating dungeons to make sure the output was what I expected.
+* This introduced me to [snapshot testing](https://testthat.r-lib.org/articles/snapshotting.html), where you can compare a function's output to some known output on record.
+
+:::
+
 ## {.center-h}
 
 <img src="assets/images/issue.png" alt="A screenshot of an issue in the r.oguelike GitHub repository. User trickytank added a printout of an error after user input.">
+
+::: {.notes}
+
+* In a similar vein, working in the open meant that people could find issues.
+* This user came across a bug.
+* I was able to hunt it down and refactor the code a bit, given me more experience of package maintenance.
+
+:::
 
 ## {.center-h}
 
 <img src="assets/images/binder.png" alt="A screenshot of RStudio running in the browser with the package r.oguelike preinstalled.">
 
+::: {.notes}
+
+* This is RStudio running in the browser with the {r.oguelike} package pre-installed.
+* This witchcraft is thanks to the Binder project.
+* This means you can play {r.oguelike} in the browser, lol.
+* Binder has implications for teaching people R concepts on the same 'hardware' without the hiccups that can come from everyone having slightly different set ups on their computers.
+
+:::
+
+## {.center-h}
+
+<!-- Vertical centering of QR code via https://github.com/quarto-dev/quarto-cli/discussions/1386 -->
+
+:::: {.columns style='display: flex !important; height: 90%;'}
+
+::: {.column width='50%'}
+<img src="assets/images/binder-mobile.jpg" height="650px" align="center" lt="A screenshot of RStudio running in a mobile-phone browser with the package r.oguelike preinstalled.">
+:::
+
+::: {.column width='50%' style='display: flex; justify-content: center; align-items: center;'}
+<img src="assets/images/binder-qr.png" height="350px" align="center" alt="A QR code that opens RStudio in the browser with the R package r.oguelike preinstalled.">
+:::
+
+::::
+
+::: {.notes}
+
+* At least one nerd in the room is probably wondering if you could run this in your mobile's browser.
+* Yes, you can.
+* No, you shouldn't.
+* But I put a QR code there anyway. Is it a rickroll?
+
+:::
+
 ## {.center-h}
 
 <img src="assets/images/isocubes-chase.gif" alt="Output in the R terminal. The top section is a tile grid of characters laid out like an 80s videogame with text-only graphics, like Rogue. Red hashes are wall tiles. Black periods are floor tiles. A green dollar sign, a yellow 'a', a pink letter 'E' and a blue 'at' symbol. Underneath is a status bar with some inventory information and instructions on how to play. The cursor is waiting on a line that says 'input'.">
 
-## \[B\] Project-driven {.center}
+::: {.notes}
 
-* Have fun `r fontawesome::fa('check')`
+* And purely for fun, I did a series of  with experimental packages
+* This example uses the {isocubes} package by Mike Cheng to draw my tiles as squares. This is made entirely within R, which is impressive for R.
+* I also looked at the {eventloop} package by the same author for continuous keypress inputs.
+* more impressively, Mike [presented](https://www.youtube.com/watch?v=LPotWAJnE_s) at last year's Posit conference an R port of the 1991 game Another World. 
+* So R is not a language for statistical computing anymore, it's a game engine!
+
+:::
+
+## Project-driven? {.center}
+
+* Solve a small ‘problem’ `r fontawesome::fa('check')`
+* Discrete scope `r fontawesome::fa('check')`
 * Fail meaningfully `r fontawesome::fa('check')`
 * Talk about it `r fontawesome::fa('check')`
-
-# \[3\] Actions
+* Have fun `r fontawesome::fa('check')`
 
 ::: {.notes}
-* Here's what I want you to consider.
+
+* So, did I meet my own definition of a project-driven learning?
+* Yeah.
+
+:::
+
+# \[3\] Consider
+
+::: {.notes}
+
+* So hopefully my point is clear and the example is useful, if contrived.
+* But where to start?
+* There's a few ideas for you to get started, or for you to share with your team.
+
 :::
 
 ## In-gov {.center}
@@ -401,10 +522,12 @@ B. Project-driven
 * [Coffee & Coding](https://analysisfunction.civilservice.gov.uk/support/reproducible-analytical-pipelines/coffee-and-coding/#cabinet-office)
 
 ::: {.notes}
-* There are some structured offers that implement contained, project-driven learning.
+
+* There are some structured offers within government that implement contained, project-driven learning.
 * Data Science and visualisation accelerators are cross-government.
 * You are entitled to volunteering, where you could take on a project-driven approach.
 * Coffee & Coding (or similar) let you share your progress, hold yourself to account and to network with the wider analytical community. This can improve your chances of those 'bonus' features for your project.
+
 :::
 
 ## External {.center}
@@ -414,15 +537,18 @@ B. Project-driven
 * [genuary](https://genuary.art/)
 
 ::: {.notes}
+
 * There are several prompt-driven schemes that also work in the context of project-driven learning.
-* Tidytuesday is a community-driven event that provides a dataset on a weekly basis that you can go away and explore to produce some kind of output (a table, a chart, an app, etc).
+* Tidytuesday is a community-hosted event that provides a dataset on a weekly basis that you can go away and explore to produce some kind of output (a table, a chart, an app, etc).
 * There's a bunch of month-long events throughout the year that do a similar thing, but give you a daily challenge within the monthly theme (e.g. charts, maps, generative).
+
 :::
 
 ## To reiterate {.center}
 
 * Module-driven isn't always bad
 * Project-driven might be useful
+* Consider the latter for you/your team
 
 ##  tl;dr {.center}
 

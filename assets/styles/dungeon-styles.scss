@@ -23,6 +23,13 @@ $link-color: lighten($theme-black, 70%);
   text-align: center;
 }
 
+.v-center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90%;
+}
+
 .panel-tabset {
   font-size: 20px;
 }
