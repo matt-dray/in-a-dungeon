@@ -24,7 +24,7 @@ Try project-driven learning. Have fun.
 
 :::
 
-# \[0\] Hello
+# \[1\] Hello `r fontawesome::fa("thumbs-up")`
 
 ::: {.notes}
 
@@ -33,6 +33,7 @@ Try project-driven learning. Have fun.
 * I've been in the Civil Service for nearly a decade in multiple data and analysis roles across several orgs.
 * I'm currently involved in statistics quality, production, presentation and Reproducible Analytical Pipelines (RAP). Part of that will involve advising on learning and development.
 * I'm not here to tell you anything particularly clever. This is not a technical talk, per se. I'm going to talk about capability, and learning and development,m ostly.
+* And yes, I'm using 1- instead of 0-indexing. Come at me bro.
 
 :::
 
@@ -51,7 +52,7 @@ Try project-driven learning. Have fun.
 
 :::
 
-# \[1\] The idea
+# \[2\] The idea
 
 ::: {.notes}
 
@@ -62,7 +63,7 @@ Try project-driven learning. Have fun.
 
 :::
 
-## Approaches {.center}
+## Learning approaches {.center}
 
 A. Module-driven
 
@@ -93,7 +94,7 @@ B. Project-driven
 
 ## \[A\] Module-driven {.center}
 
-* Box-ticking?
+* Box-ticking? Badge-chasing?
 * Too generic?
 * Forgettable?
 
@@ -136,7 +137,7 @@ B. Project-driven
 
 :::
 
-# \[2\] Example
+# \[3\] Example
 
 ::: {.notes}
 
@@ -175,6 +176,21 @@ B. Project-driven
 * Packages are a fundamental discrete structure for R code.
 * This has the advantage of being open for others to use and contribute to.
 * I also decided that I would write short blogposts, or 'developer logs', to explain my thinking out loud.
+
+:::
+
+## {.center-h}
+
+<img src="assets/images/r.oguelike-hex.png" alt="A black hexagon with a green border. Text below center on the hexagon reads 'r.oguelike' in green. Above that is a 3 by 10 grid of punctuation characters in green. Far left and right edges are hashmarks and between them are periods, as well as a single 'at' symbol and dollar symbol. The pattern mimics a text-only roguelike videogame typical of the 1980s.">
+
+`r fontawesome::fa('github')` [github.com/matt-dray/r.oguelike](https://github.com/matt-dray/r.oguelike)
+
+`r fontawesome::fa('book')` [rostrum.blog/tags/r.oguelike/](https://www.rostrum.blog/tags/r.oguelike/)
+
+::: {.notes}
+
+* The whole thing is bundled up in the r.oguelike package, which is available from GitHub.
+* You can also read the devlog series.
 
 :::
 
@@ -371,21 +387,6 @@ B. Project-driven
 
 :::
 
-## {.center-h}
-
-<img src="assets/images/r.oguelike-hex.png" alt="A black hexagon with a green border. Text below center on the hexagon reads 'r.oguelike' in green. Above that is a 3 by 10 grid of punctuation characters in green. Far left and right edges are hashmarks and between them are periods, as well as a single 'at' symbol and dollar symbol. The pattern mimics a text-only roguelike videogame typical of the 1980s.">
-
-`r fontawesome::fa('github')` [github.com/matt-dray/r.oguelike](https://github.com/matt-dray/r.oguelike)
-
-`r fontawesome::fa('book')` [rostrum.blog/tags/r.oguelike/](https://www.rostrum.blog/tags/r.oguelike/)
-
-::: {.notes}
-
-* The whole thing is bundled up in the r.oguelike package, which is available from GitHub.
-* You can also read the devlog series.
-
-:::
-
 ## Format {.center}
 
 * An R package `r fontawesome::fa('check')`
@@ -482,9 +483,9 @@ B. Project-driven
 
 ::: {.notes}
 
-* And purely for fun, I did a series of  with experimental packages
-* This example uses the {isocubes} package by Mike Cheng to draw my tiles as squares. This is made entirely within R, which is impressive for R.
-* I also looked at the {eventloop} package by the same author for continuous keypress inputs.
+* And purely for fun, I did a series of extensions to the graphics using experimental packages.
+* [This example](https://gist.github.com/matt-dray/a2db654bc7c09a7be1f1d32cdc3e1a45) uses [the {isocubes} package](https://github.com/coolbutuseless/isocubes) by [Mike Cheng](https://coolbutuseless.github.io/) to draw my tiles as cubes This is made entirely within R, which is impressive for R.
+* I also looked at [the {eventloop} package](https://github.com/coolbutuseless/eventloop) by the same author for continuous keypress inputs.
 * more impressively, Mike [presented](https://www.youtube.com/watch?v=LPotWAJnE_s) at last year's Posit conference an R port of the 1991 game Another World. 
 * So R is not a language for statistical computing anymore, it's a game engine!
 
@@ -505,7 +506,7 @@ B. Project-driven
 
 :::
 
-# \[3\] Consider
+# \[4\] Consider
 
 ::: {.notes}
 
@@ -548,7 +549,15 @@ B. Project-driven
 
 * Module-driven isn't always bad
 * Project-driven might be useful
-* Consider the latter for you/your team
+* Think before you default
+
+::: {.notes}
+
+* There's a time for module-driven learning, perhaps when you literally know _nothing_ about a subject.
+* But project-driven can be a really fruitful.
+* Consider how you/your team can make best use of this approach.
+
+:::
 
 ##  tl;dr {.center}
 
