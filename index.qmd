@@ -93,9 +93,9 @@ B. Project-driven
 
 ## \[A\] Module-driven {.center}
 
-* Box-ticking
-* Not tailored
-* Forgettable
+* Box-ticking?
+* Too generic?
+* Forgettable?
 
 ::: {.notes}
 
@@ -118,20 +118,19 @@ B. Project-driven
 
 * What do you need to learn? How can you make this a discrete project in the form of a package, an app, generative art, a series of scripts, etc?
 * Limit its scope early, solve one problem, expand later.
-* The data you use and the functionality of the thing you create don't have to be meaningful. It might be something that helps your organisation. But it can be a bit silly, like in the example I'll show in a minute.
-* The learning is controlled by you, not administered to you.
+* The learning is controlled by you, not administered to you. You are not a sponge.
 
 :::
 
 ## \[B\] Project-driven {.center}
 
-* Mimics real world
+* Have fun
 * Fail meaningfully
 * Talk about it
 
 ::: {.notes}
 
-* You'll be learning how to solve something, rather than trying to sponge lots of information.
+* * The data you use and the functionality of the thing you create don't have to be meaningful. It might be something that helps your organisation. But it can be a bit silly, like in the example I'll show in a minute.
 * Making a mistake will engage you to solve it.
 * Broadcasting can help keep you in check, bring other people on your journey, and help you in unexpected ways. I don't think this is emphasised in modular learning.
 
@@ -150,9 +149,9 @@ B. Project-driven
 
 ## Goals {.center}
 
-1. Interact withuser interaction
-1. Detect and respond to IDE
-1. Build simple algorithms from scratch
+1. Interact with user
+2. Detect and respond to IDE
+3. Build simple algos from scratch
 
 ::: {.notes}
 
@@ -167,27 +166,8 @@ B. Project-driven
 ## Format {.center}
 
 * An R package
-* Communicated via dev logs
 * Openly available on GitHub
-
-::: {.notes}
-
-* The natural type of project for this work was an R package. 
-
-:::
-
-## {.center-h}
-
-<img src="assets/images/r.oguelike-hex.png" width="20px" alt="A black hexagon with a green border. Text below center on the hexagon reads 'r.oguelike' in green. Above that is a 3 by 10 grid of punctuation characters in green. Far left and right edges are hashmarks and between them are periods, as well as a single 'at' symbol and dollar symbol. The pattern mimics a text-only roguelike videogame typical of the 1980s.">
-
-`r fontawesome::fa('github')` [github.com/matt-dray/r.oguelike](https://github.com/matt-dray/r.oguelike)
-
-`r fontawesome::fa('book')` [rostrum.blog/tags/r.oguelike/](https://www.rostrum.blog/tags/r.oguelike/)
-
-::: {.notes}
-* You can access the R package on GitHub.
-* I've written a series of blog posts about the development of this package.
-:::
+* Communicate via dev logs, open code
 
 ## {.center-h}
 
@@ -202,9 +182,9 @@ B. Project-driven
 
 ## Goals {.center}
 
-1. ~~Implement user interaction, interfaces~~
-1. ~~Detect and respond to IDE~~
-1. Build simple algorithms from scratch
+1. Interact with user `r fontawesome::fa('check')`
+2. Detect and respond to IDE `r fontawesome::fa('check')`
+3. Build simple algorithms from scratch
 
 ## Procgen {.center}
 
@@ -353,27 +333,60 @@ B. Project-driven
 :::
 
 ::: {.notes}
+
 * How can the enemy navigate to the player?
 * Generate a layer that gives you the number of tiles away from the player.
 * Move the enemy to a tile with a lower value.
+
 :::
 
 ## Goals {.center}
 
-1. ~~Implement user interaction, interfaces~~
-1. ~~Detect and respond to IDE~~
-1. ~~Build simple algorithms from scratch~~
-
-## Bonuses {.center}
-
-1. Learnt snapshot testing
-1. Used Binder
-1. Implemented sounds
+1. Interact with user `r fontawesome::fa('check')`
+2. Detect and respond to IDE `r fontawesome::fa('check')`
+3. Build simple algorithms from scratch `r fontawesome::fa('check')`
 
 ## {.center-h}
 
-<img src="assets/images/isocubes-chase.gif" alt="Output in the R terminal. The top section is a tile grid of characters laid out like an 80s videogame with text-only graphics, like Rogue. Red hashes are wall tiles Black periods are floor tiles. A green dollar sign, a yellow 'a', a pink letter 'E' and a blue 'at' symbol. UNderneath is a status bar with some inventory information and instructions on how to play. The cursor is waiting on a line that says 'input'.">
+<img src="assets/images/r.oguelike-hex.png" width="20px" alt="A black hexagon with a green border. Text below center on the hexagon reads 'r.oguelike' in green. Above that is a 3 by 10 grid of punctuation characters in green. Far left and right edges are hashmarks and between them are periods, as well as a single 'at' symbol and dollar symbol. The pattern mimics a text-only roguelike videogame typical of the 1980s.">
 
+`r fontawesome::fa('github')` [github.com/matt-dray/r.oguelike](https://github.com/matt-dray/r.oguelike)
+
+`r fontawesome::fa('book')` [rostrum.blog/tags/r.oguelike/](https://www.rostrum.blog/tags/r.oguelike/)
+
+## Format {.center}
+
+* An R package `r fontawesome::fa('check')`
+* Openly available on GitHub `r fontawesome::fa('check')`
+* Communicate via dev logs, open code `r fontawesome::fa('check')`
+
+## Bonus round {.center}
+
+1. Snapshot testing
+2. Play in-browser with Binder
+3. Three dimensions?
+
+## {.center-h}
+
+<img src="assets/images/snapshot-pr.png" alt="A screenshot of a pull request in the r.oguelike GitHub repository. User trevorld added snapshot tests to the repo and matt-dray merged it.">
+
+## {.center-h}
+
+<img src="assets/images/issue.png" alt="A screenshot of an issue in the r.oguelike GitHub repository. User trickytank added a printout of an error after user input.">
+
+## {.center-h}
+
+<img src="assets/images/binder.png" alt="A screenshot of RStudio running in the browser with the package r.oguelike preinstalled.">
+
+## {.center-h}
+
+<img src="assets/images/isocubes-chase.gif" alt="Output in the R terminal. The top section is a tile grid of characters laid out like an 80s videogame with text-only graphics, like Rogue. Red hashes are wall tiles. Black periods are floor tiles. A green dollar sign, a yellow 'a', a pink letter 'E' and a blue 'at' symbol. Underneath is a status bar with some inventory information and instructions on how to play. The cursor is waiting on a line that says 'input'.">
+
+## \[B\] Project-driven {.center}
+
+* Have fun `r fontawesome::fa('check')`
+* Fail meaningfully `r fontawesome::fa('check')`
+* Talk about it `r fontawesome::fa('check')`
 
 # \[3\] Actions
 
@@ -397,26 +410,19 @@ B. Project-driven
 ## External {.center}
 
 * [tidytuesday](https://github.com/rfordatascience/tidytuesday)
-* [30DayChartChallenge](https://30daychartchallenge.org/), [30DayMapChallenge](https://30daymapchallenge.com/), [genuary](https://genuary.art/)
-* [Advent of Code](https://adventofcode.com/)
+* [30DayChartChallenge](https://30daychartchallenge.org/), [30DayMapChallenge](https://30daymapchallenge.com/)
+* [genuary](https://genuary.art/)
 
 ::: {.notes}
 * There are several prompt-driven schemes that also work in the context of project-driven learning.
 * Tidytuesday is a community-driven event that provides a dataset on a weekly basis that you can go away and explore to produce some kind of output (a table, a chart, an app, etc).
 * There's a bunch of month-long events throughout the year that do a similar thing, but give you a daily challenge within the monthly theme (e.g. charts, maps, generative).
 :::
-
 
 ## To reiterate {.center}
 
 * Module-driven isn't always bad
-* Project-driven isn't always right
-
-::: {.notes}
-* There are several prompt-driven schemes that also work in the context of project-driven learning.
-* Tidytuesday is a community-driven event that provides a dataset on a weekly basis that you can go away and explore to produce some kind of output (a table, a chart, an app, etc).
-* There's a bunch of month-long events throughout the year that do a similar thing, but give you a daily challenge within the monthly theme (e.g. charts, maps, generative).
-:::
+* Project-driven might be useful
 
 ##  tl;dr {.center}
 
