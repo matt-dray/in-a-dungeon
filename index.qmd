@@ -4,8 +4,6 @@ subtitle: 'Matt Dray, March 2023'
 format:
   revealjs: 
     theme: [default, assets/styles/dungeon-styles.scss]
-    code-overflow: wrap
-    # footer: '[matt-dray.github.io/in-a-dungeon](https://matt-dray.github.io/in-a-dungeon)'
 ---
 
 ##  tl;dr {.center}
@@ -18,76 +16,165 @@ Try project-driven learning. Have fun.
 
 `r fontawesome::fa('globe')` [matt-dray.com](https://www.matt-dray.com)
 
+::: {.notes}
+
+* 'Too long; didn't read' for a summary. Snapshot this slide and then fall asleep.
+* Basically: try small-scale, focused project-driven learning where you have fun and fail. I've often found found this preferable to what I'm calling module-driven development.
+* Links are to the R package I'll be talking about; to a series of blogs about its development; and to my own personal page.
+
+:::
+
 # \[0\] Hello
 
 ::: {.notes}
-* I've had multiple roles in five orgs.
-* Currently involved in statistics quality, production, presentation and (Reproducible Analytical Pipelines) RAP.
-* I had little experience when I started.
+
+* We've got some exciting speakers today from a range of interesting organisations.
+* ...And you've also got me.
+* I've been in the Civil Service for nearly a decade in multiple data and analysis roles across several orgs.
+* I'm currently involved in statistics quality, production, presentation and Reproducible Analytical Pipelines (RAP). Part of that will involve advising on learning and development.
+* I'm not here to tell you anything particularly clever. This is not a technical talk, per se. I'm going to talk about capability, and learning and development,m ostly.
+
 :::
 
 ## Disclaimers {.center}
 
 * These are my thoughts
 * We're all different
-* I'm privileged
+* This is context-dependent
 
 ::: {.notes}
+
 * These are my personal experiences and I'm not speaking officially. 
-* My managers give me time and space and I can afford to use my free time too.
-* What works for me might not work for you.
+* I'm privileged: my managers have given me time and space; I have some time to learn as a hobbyist too.
+* What works for me might not work for you. Approaches may suit one environment but not another. 
+* You might think about this from the perspective of a learner, or as a manager wanting to develop staff.
+
 :::
 
 # \[1\] The idea
 
-## Definitions {.center}
-
-1. Module-driven
-2. Project-driven
-
 ::: {.notes}
-* 'Normal'
-* 'Rare'
+
+* I had little experience of programming when I joined the Civil Service. I didn't come from a computer science background.
+* I think I'm competent now (in R at least). I have a good sense of what has helped me develop on that journey.
+* Maybe one person will rethink their approach to learning and development.
+* Maybe one person will be mildly be amused by making R go off-piste, or will feel a pang of nostalgia.
+
 :::
 
-## \[1\] Module-driven {.center}
+## Approaches {.center}
 
-* Checkbox exercise
-* Passive
+A. Module-driven
+
+B. Project-driven
+
+::: {.notes}
+
+* I need to start by setting up a bit of a false dichotomy.
+* I want to tell you about learning with a project-driven focus, which requires a definition.
+* But I will also need to define what I think is the status quo, 'module-driven development', for comparison.
+
+:::
+
+## \[A\] Module-driven {.center}
+
+* Passive walkthroughs
+* Comprehension tests
+* It's done _to_ you
+
+::: {.notes}
+
+* I'm talking generally about short videos or static documents, probably followed with comprehension exercises.
+* This extends to taking part in big workshops with a low teacher-to-student ratio.
+* I'm not naming any providers, but you might be able to think of some.
+* The training is administered to you, a participant.
+
+:::
+
+## \[A\] Module-driven {.center}
+
+* Box-ticking
+* Not tailored
 * Forgettable
 
 ::: {.notes}
-* It ticks a box in your learning plan.
-* It isn't tailored to your needs.
-* Lacks engagement.
+
+* I've been told to do these to tick a box in my learning plan.
+* They're rarely tailored to your specific needs.
+* You're at the mercy of the trainer.
+* Often not a good mimic of how the world actually works.
+* They often lack engagement; you just need to sit through them all and get a passing grade.
+* I personally find it difficult to retain the information and the notes are often just the content.
+
 :::
 
-## \[2\] Project-driven {.center}
+## \[B\] Project-driven {.center}
 
-* Solve a problem
+* Solve a small 'problem'
+* Discrete scope
+* It's done _by_ you
+
+::: {.notes}
+
+* What do you need to learn? How can you make this a discrete project in the form of a package, an app, generative art, a series of scripts, etc?
+* Limit its scope early, solve one problem, expand later.
+* The data you use and the functionality of the thing you create don't have to be meaningful. It might be something that helps your organisation. But it can be a bit silly, like in the example I'll show in a minute.
+* The learning is controlled by you, not administered to you.
+
+:::
+
+## \[B\] Project-driven {.center}
+
+* Mimics real world
 * Fail meaningfully
 * Talk about it
 
 ::: {.notes}
-* What if you could focus on a problem to solve and work towards it?
-* Limit its scope early, solve one problem, expand later.
-* Broadcasting can help keep you in check, bring other people on your journey, and help you in unexpected ways. 
+
+* You'll be learning how to solve something, rather than trying to sponge lots of information.
+* Making a mistake will engage you to solve it.
+* Broadcasting can help keep you in check, bring other people on your journey, and help you in unexpected ways. I don't think this is emphasised in modular learning.
+
 :::
 
 # \[2\] Example
 
 ::: {.notes}
+
 * This is a project-driven example of mine.
-* It's slightly contrived.
-* It involves connectivity and patterns, which are themes of this conference.
-* But it also panders to the nerds.
+* It's slightly contrived because I chose a past example that involves connectivity and patterns (themes of this conference).
+* It also panders to the nerds.
+* I'll tell you about some specific things I wanted to learn; the silly, discrete project I concocted to learn them; how communicating about it has helped me; and how this approach led to some unexpected bonus outcomes.
+
 :::
 
 ## Goals {.center}
 
-1. Implement simple algorithms
-1. Understand user interaction
-1. Build an R package
+1. Interact withuser interaction
+1. Detect and respond to IDE
+1. Build simple algorithms from scratch
+
+::: {.notes}
+
+* I have a running list of things I want to learn. Sometimes these are really small things, like an individual function.
+* A good exercise is to think how a few of them might be combined to achieve some goal.
+* I expect to build packages for use by near-beginners; interactive confirmation is more friendly and could limit damage.
+* Sometimes behaviour differs by operating system, but sometimes the development environment too. It's easy to get stuck thinking about RStudio if you're an R user, but what about people on the terminal or elsewhere?
+* I mentioned coming into the Civil Service without computing experience. I think it's a good exercise to think through the logic of an approach and 'roll your own' in a learning context.
+
+:::
+
+## Format {.center}
+
+* An R package
+* Communicated via dev logs
+* Openly available on GitHub
+
+::: {.notes}
+
+* The natural type of project for this work was an R package. 
+
+:::
 
 ## {.center-h}
 
@@ -112,6 +199,12 @@ Try project-driven learning. Have fun.
 * You had to collect items and battle enemies to recover an artifact.
 * {r.oguelike} emulates this by creating a procedurally generated dungeon where you can collect items and battle an enemy.
 :::
+
+## Goals {.center}
+
+1. ~~Implement user interaction, interfaces~~
+1. ~~Detect and respond to IDE~~
+1. Build simple algorithms from scratch
 
 ## Procgen {.center}
 
@@ -265,6 +358,12 @@ Try project-driven learning. Have fun.
 * Move the enemy to a tile with a lower value.
 :::
 
+## Goals {.center}
+
+1. ~~Implement user interaction, interfaces~~
+1. ~~Detect and respond to IDE~~
+1. ~~Build simple algorithms from scratch~~
+
 ## Bonuses {.center}
 
 1. Learnt snapshot testing
@@ -300,6 +399,18 @@ Try project-driven learning. Have fun.
 * [tidytuesday](https://github.com/rfordatascience/tidytuesday)
 * [30DayChartChallenge](https://30daychartchallenge.org/), [30DayMapChallenge](https://30daymapchallenge.com/), [genuary](https://genuary.art/)
 * [Advent of Code](https://adventofcode.com/)
+
+::: {.notes}
+* There are several prompt-driven schemes that also work in the context of project-driven learning.
+* Tidytuesday is a community-driven event that provides a dataset on a weekly basis that you can go away and explore to produce some kind of output (a table, a chart, an app, etc).
+* There's a bunch of month-long events throughout the year that do a similar thing, but give you a daily challenge within the monthly theme (e.g. charts, maps, generative).
+:::
+
+
+## To reiterate {.center}
+
+* Module-driven isn't always bad
+* Project-driven isn't always right
 
 ::: {.notes}
 * There are several prompt-driven schemes that also work in the context of project-driven learning.
