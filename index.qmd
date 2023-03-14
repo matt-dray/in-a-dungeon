@@ -1,6 +1,6 @@
 ---
 title: 'Fun and Learning. In a Dungeon!'
-subtitle: 'Matt Dray, March 2023'
+subtitle: 'Matt Dray, March 2023<br>[matt-dray.github.io/in-a-dungeon](https://matt-dray.github.io/in-a-dungeon)'
 format:
   revealjs: 
     theme: [default, assets/styles/dungeon-styles.scss]
@@ -20,7 +20,7 @@ Try project-driven learning. Have fun.
 
 * 'Too long; didn't read' for a summary. Snapshot this slide and then fall asleep.
 * Basically: try small-scale, focused project-driven learning where you have fun and fail. I've often found found this preferable to what I'm calling module-driven development.
-* Links are to the R package I'll be talking about; to a series of blogs about its development; and to my own personal page.
+* Links are to these slides; an R package I'll be talking about; to a series of blogs about its development; and to my own personal page.
 
 :::
 
